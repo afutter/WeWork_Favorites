@@ -1,7 +1,3 @@
-/**
- * Created by Akiva on 3/2/17.
- */
-
 document.addEventListener('DOMContentLoaded', function () {
     //Get current list of favorites and build table of results. Replace table with a message if no favorites selected
     getFavorites().then(function(results){
@@ -57,4 +53,3 @@ function addRows(favorites){
         )}
     return toAppendToTable;
 }
-

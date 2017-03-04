@@ -105,6 +105,3 @@ function getFavStatus(type, url){
         });
     });
 }
-
-
-
