@@ -1,0 +1,36 @@
+html, body{
+    width: 400px;
+    background-color:#f5deb2;
+    font-family: Knockout\ 48 A,Knockout\ 48 B,Impact,Apercu,Calibri,Roboto,Helvetica,sans-serif;
+}
+h2, table{
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+h2{
+    margin-top: 20px;
+}
+h3{
+    text-align: center;
+    font-family: Apercu,Proxima Nova W01,Helvetica Neue,Calibri,Roboto,sans-serif;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+a{
+    color: black ;
+    text-decoration: none;
+}
+tr{
+    font-family: Apercu,Proxima Nova W01,Helvetica Neue,Calibri,Roboto,sans-serif;
+}
+tr:hover td, tr:hover a, tr:active {
+    background:black;
+    color: white;
+}
+td a{
+    display: block;
+}
+

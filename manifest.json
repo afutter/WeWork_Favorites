@@ -1,0 +1,28 @@
+{
+  "name": "Favorite WeWork Locations",
+  "description": "An extension that allows users to save favorite WeWork locations",
+  "version" : "1.0",
+  "permissions": [
+    "tabs", "http://www.wework.com/l/*","https://www.wework.com/l/*", "http://*/*", "https://*/*", "storage", "webNavigation", "activeTab"
+  ],
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "run_at": "document_end",
+      "matches":["*://www.wework.com/l/*"],
+      "js": ["scripts/contentscript.js"]
+    }
+  ],
+  "browser_action" : {
+    "default_title" : "See Favorite WeWork Offices",
+    "default_popup": "html/popup.html",
+    "default_icon": "wework_logo.png"
+
+  },
+  "web_accessible_resources": ["css/contentscriptstyle.css"],
+  "manifest_version": 2
+}
