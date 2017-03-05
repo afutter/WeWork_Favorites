@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     //Get current list of favorites and build table of results. Replace table with a message if no favorites selected
     getFavorites().then(function(results){
-
-        if(Object.keys(results).length === 0 && results.constructor === Object){
+        if( (Object.keys(results).length === 0 && results.constructor === Object) || results == null){
             var noFavorites = document.createElement("h3");
             noFavorites.innerText = "No Favorites Selected";
             document.body.replaceChild(noFavorites, document.getElementById("table"));
@@ -17,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }).catch(function(msg){
         console.log(msg);
+        var noFavorites = document.createElement("h3");
+        noFavorites.innerText = "No Favorites Selected";
+        document.body.replaceChild(noFavorites, document.getElementById("table"));
     });
 });
 
